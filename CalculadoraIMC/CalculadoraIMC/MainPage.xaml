@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMC.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType ="Entry" ApplyToDerivedTypes="True" x:Key="entries">
+            <Setter Property="FontSize" Value="Header"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout VerticalOptions="Center"
+                 HorizontalOptions="Center">
+        <Label Text="Calcula tu IMC" TextColor="Blue"/>
+        <Entry Placeholder="Altura" x:Name="Altura"
+               Keyboard="Numeric"/>
+        <Entry Placeholder="Peso" x:Name="Peso"
+                Keyboard="Numeric"/>
+        <Entry Style="{StaticResource  entries}" x:Name="IMC" Placeholder="Tu IMC"
+                Keyboard="Numeric"/>
+        <Button Text="Calcular" Clicked="Button_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
